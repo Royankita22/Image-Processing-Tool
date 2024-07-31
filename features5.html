@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="features.css">
+    <title>JPG TO PNG </title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            
+            <ul>
+              <li><a href="#">PixelFusion Lab
+              </a></li>
+           </ul>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="land.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="allfeatures.html">Services</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="login">
+        <img src="features.jpeg" alt="login image" class="login__img">
+
+        <form action="upload5.php" method="post" class="login__form" enctype="multipart/form-data">
+           <h1 class="login__title">Upload Image</h1>
+
+           <div class="login__content">
+                    <input type="file" name="image" id="image">
+                    <button type="submit" name="submit">Upload</button>
+            </div>
+            <div id="imageContainer">
+                <img id="uploadedImage" src="#" alt="Uploaded Image">
+            </div>
+            <script>
+                document.getElementById('image').addEventListener('change', function() {
+                    var file = this.files[0];
+                    var reader = new FileReader();
+        
+                    reader.onload = function(e) {
+                        var img = new Image();
+                        img.onload = function() {
+                            var canvas = document.createElement('canvas');
+                            var ctx = canvas.getContext('2d');
+        
+                            var maxWidth = 800; // Set maximum width
+                            var maxHeight = 700; // Set maximum height
+        
+                            var width = img.width;
+                            var height = img.height;
+        
+                            if (width > height) {
+                                if (width > maxWidth) {
+                                    height *= maxWidth / width;
+                                    width = maxWidth;
+                                }
+                            } else {
+                                if (height > maxHeight) {
+                                    width *= maxHeight / height;
+                                    height = maxHeight;
+                                }
+                            }
+        
+                            canvas.width = width;
+                            canvas.height = height;
+        
+                            ctx.drawImage(img, 0, 0, width, height);
+        
+                            var dataUrl = canvas.toDataURL('image/jpeg'); // Convert canvas to data URL
+                            document.getElementById('uploadedImage').src = dataUrl;
+                        };
+        
+                        img.src = e.target.result;
+                    };
+        
+                    reader.readAsDataURL(file);
+                });
+            </script>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 PixelFusion Lab | All rights reserved by Labani Mandal, Ankita Roy, Sayantai Bose</p>
+    </footer>
+</body>
+</html>

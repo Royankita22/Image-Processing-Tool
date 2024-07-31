@@ -1,0 +1,152 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Style for the header area */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for the logo */
+.logo img {
+  width: 20px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the navigation menu */
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #ff0; /* Change color on hover */
+}
+* {
+  box-sizing: border-box;
+  box-shadow: #333;
+  padding: 0;
+  margin: 0;
+}
+.logo ul {
+  list-style-type: none;
+}
+
+.logo ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.logo ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.logo ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo ul li a:hover {
+  color: #ff0; /* Change color on hover */
+}
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.features{
+    text-align: center;
+    color: black;
+    padding: 2cm;
+    margin: auto;
+}
+.container{
+  background-image: url("landback.jpg");
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.hero{
+  text-align: center;
+}
+.cta-button{
+  padding: 0.5cm;
+  color: wheat;
+  background-color: black;
+  border-radius: 20px; /* Adjust the value to change the roundness */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none; /* Remove border if not needed */
+  cursor: pointer;
+}

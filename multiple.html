@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Operation Buttons</title>
+  
+  <style>
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Style for the header area */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.container {
+  background-image: url('landback.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Adjust height as needed */
+}
+/* Style for the logo */
+.logo img {
+  width: 20px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the navigation menu */
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #ff0; /* Change color on hover */
+}
+* {
+  box-sizing: border-box;
+  box-shadow: #333;
+  padding: 0;
+  margin: 0;
+}
+.logo ul {
+  list-style-type: none;
+}
+
+.logo ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.logo ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.logo ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo ul li a:hover {
+  color: #ff0; /* Change color on hover */
+}
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.center{
+  text-align: center;
+  color: #333;
+  padding: 0%;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30rem;
+}
+  </style>
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+               
+                <ul>
+                  <li><a href="land.html">PixelFusion Lab
+                  </a></li>
+               </ul>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="allfeatures.html">Services</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero">
+          
+          <marquee behavior="scroll" direction="Left"><h1>Various Operations</h1></marquee>
+        </section>
+  <div class="center"
+  <h2>Multiple Operation Buttons</h2>
+  </div>
+
+
+  <div class="button-container">
+    <style>
+      /* Dropdown Button */
+      .dropdown {
+          position: relative;
+          display: inline-block;
+          
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 120px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+  </style>
+  
+  <!-- Example of a Dropdown Button -->
+  <div class="dropdown">
+    <button class="button" onclick="toggleDropdown()">Colour Channel</button>
+    <ul id="dropdownOptions" class="dropdown-content">
+      <li><button class="button" onclick="operation9()">Red </button></li>
+      <li><button class="button" onclick="operation10()">Green</button></li>
+      <li><button class="button" onclick="operation11()">Blue</button></li>
+    </ul>
+  </div>
+    <button class="button" onclick="operation1()">Format Change</button>
+    <button class="button" onclick="operation2()">Sketch</button>
+    <button class="button" onclick="operation3()">Edge</button>
+    <button class="button" onclick="operation4()">Resize</button>
+    <button class="button" onclick="operation5()">Flipping</button>
+    <button class="button" onclick="operation6()">Filtering</button>
+    <button class="button" onclick="operation7()">Histogram Equalization </button>
+    <button class="button" onclick="operation8()">Morphological image </button>
+    <button class="button" onclick="operation12()">Convolution </button>
+    <button class="button" onclick="operation13()">Quardrent shuffle</button>
+    
+        
+    
+  </div>
+  <script>
+    function operation1() {
+        window.location.href = 'features.html';
+    }
+</script>
+<script>
+  function operation2() {
+      window.location.href = 'features1.html';
+  }
+</script>
+<script>
+  function operation3() {
+      window.location.href = 'features2.html';
+  }
+</script>
+<script>
+  function operation4() {
+      window.location.href = 'features3.html';
+  }
+</script>
+<script>
+  function operation5() {
+      window.location.href = 'features4.html';
+  }
+</script>
+<script>
+  function operation6() {
+      window.location.href = 'features5.html';
+  }
+</script>
+<script>
+  function operation7() {
+      window.location.href = 'features6.html';
+  }
+</script>
+<script>
+  function operation8() {
+      window.location.href = 'features7.html';
+  }
+</script>
+<script>
+  function operation9() {
+      window.location.href = 'features8.html';
+  }
+</script>
+<script>
+  function operation10() {
+      window.location.href = 'features9.html';
+  }
+</script>
+<script>
+  function operation11() {
+      window.location.href = 'features10.html';
+  }
+</script>
+<script>
+  function operation12() {
+      window.location.href = 'features11.html';
+  }
+</script>
+<script>
+  function operation13() {
+      window.location.href = 'features12.html';
+  }
+</script>
+
+<script>
+  function operation14() {
+      window.location.href = 'features13.html';
+  }
+</script>
+
+
+<script>
+  function toggleDropdown() {
+      var dropdown = document.getElementById("dropdownOptions");
+      if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+      } else {
+          dropdown.style.display = "block";
+      }
+  }
+  </script>
+
+<footer class="footer">
+  <p>&copy; 2024 PixelFusion Lab | All rights reserved by Labani Mandal, Ankita Roy, Sayantani Bose</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

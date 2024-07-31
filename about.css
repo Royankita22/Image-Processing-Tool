@@ -1,0 +1,162 @@
+/* Basic styles */
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Style for the header area */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for the logo */
+.logo img {
+  width: 20px; /* Adjust as needed */
+  height: auto; /* Mfloat: left;*/
+  float: left;
+}
+
+/* Style for the navigation menu */
+.navbar ul {
+  list-style-type: none;
+  margin-right: 3rem;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #ff0; /* Change color on hover */
+}
+* {
+  box-sizing: border-box;
+  box-shadow: #333;
+  padding: 0;
+  margin: 0;
+}
+.logo ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.logo ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.logo ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.logo ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo ul li a:hover {
+  color: #ff0; /* Change color on hover */
+}
+body {
+    background-image: url("features.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: right;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+h1{
+    color: wheat;
+}
+h2{
+        text-align:left;
+        color: rgb(243, 243, 243);
+}
+p{
+    color: #fff;
+}
+li{
+    color: #fff;
+    text-decoration: double;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* List styles */
+#team-list {
+    list-style: none;
+    padding: 0;
+}
+
+#team-list li {
+    margin-bottom: 5px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
